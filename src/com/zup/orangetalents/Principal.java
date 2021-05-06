@@ -23,6 +23,12 @@ public class Principal {
 	 * 
 	 * Como sabemos, todo programa Java deve ter o seu método main. */
 	
+	/*
+	 * O Tomcat fica responsável por instanciar todos os objetos Servlets que nós criamos
+	 * Não é nossa responsábilidade criar um método main e instanciar os Servlets, o Tomcat cuida desse controle
+	 * essa é a principal caracteristica do conceito "Inversão de Controle"
+	 */
+	
 	public static void main(String[] args) throws IOException {
 		/* Nesse trecho de código, nós configuramos para o nosso programa ficar ouvindo na porta 8080
 		 * da nossa máquina (localhost).
@@ -40,7 +46,13 @@ public class Principal {
 		 * 
 		 * No caso de exemplo, criei dois contextos e cada contexto é atendimento por um "Servlet" diferente.
 		 * 
-		 * ATENÇÃO: Não estamos usando Servlet de verdade aqui, é apenas uma simulação didática!!! */
+		 * ATENÇÃO: Não estamos usando Servlet de verdade aqui, é apenas uma simulação didática!!!
+		 *  
+		 * ATENÇÃO: O comportamento padrão do Tomcat não instancia o Servlet no momento que starta o servidor!!
+		 *          Por padrão ele instancia no momento em que é feita alguma requisição para o servlet
+		 *          e uma vez instanciado o objeto do servlet, ele permanece em memória (apenas uma instância) até o servidor for encerrado
+		 *          e toda vez que chamamos novamente o servlet, é a mesma instancia que será utilizada.
+		 * (aqui estamos instanciando logo no start do servidor, para facilitar a didática)*/
 		servidor.createContext("/1", new Servlet1());
 		servidor.createContext("/2", new Servlet2());
 		
