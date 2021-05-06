@@ -73,11 +73,11 @@ public class Principal {
 				.append("</html");
 			
 			String response = htmlBuilder.toString();
-            conexao.sendResponseHeaders(200, response.length());
-            OutputStream os = conexao.getResponseBody();
-            os.write(response.getBytes());
-            os.flush();
-            os.close();
+			conexao.sendResponseHeaders(200, response.length());
+			OutputStream os = conexao.getResponseBody();
+			os.write(response.getBytes());
+			os.flush();
+			os.close();
 			
 		}
 	}
@@ -99,11 +99,11 @@ public class Principal {
 				.append("</html");
 			
 			String response = htmlBuilder.toString();
-            conexao.sendResponseHeaders(200, response.length());
-            OutputStream os = conexao.getResponseBody();
-            os.write(response.getBytes());
-            os.flush();
-            os.close();
+			conexao.sendResponseHeaders(200, response.length());
+			OutputStream os = conexao.getResponseBody();
+			os.write(response.getBytes());
+			os.flush();
+			os.close();
 			
 		}
 	}
