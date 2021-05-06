@@ -6,7 +6,7 @@ O código é simples e está todo comentado. Minha intenção não é afirmar qu
 
 Para utilizar, basta clonar esse repositório e abrir como projeto no Eclipse. Caso dê alguma inconsistência, basta criar um projeto Java (não precisar ser Projeto Web, apenas um Projeto Java) e copiar o conteúdo da classe Principal.java
 
-A classe Principal.java ao ser executada irá "criar" o nosso servidor, como se fosse o Tomcat, e aceitará requisições nos seguintes endereços: http://localhost:8080/1 e http://localhost:8080/1
+A classe Principal.java ao ser executada irá "criar" o nosso servidor, como se fosse o Tomcat, e aceitará requisições nos seguintes endereços: http://localhost:8080/1 e http://localhost:8080/2
 
 Qualquer dúvida, vamos discutir lá pelo Chat!
 
